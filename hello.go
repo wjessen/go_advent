@@ -30,10 +30,7 @@ func main() {
 		prev_val_int, err := strconv.Atoi(apples[i-1])
 		this_val_int, err := strconv.Atoi(apples[i])
 
-		if err != nil {
-			fmt.Println(err)
-			os.Exit(2)
-		}
+		check(err)
 
 		if this_val_int > prev_val_int {
 			total_changes += 1
